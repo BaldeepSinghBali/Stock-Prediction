@@ -376,10 +376,19 @@ async function runPrediction(stock, container) {
   } catch (err) {
     destroyChart();
     if (err.message === "SERVER_OFFLINE" || err.message === "SERVER_ERROR") {
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
       container.innerHTML = `
-        <p style="color:var(--muted); margin-bottom:1rem;">Price data is loaded through the local dev server (Yahoo Finance). From the project folder run:</p>
-        <pre style="background:rgba(0,0,0,0.35); border:1px solid var(--stroke-soft); border-radius:12px; padding:14px; font-family:var(--font-mono); font-size:0.82rem; color:var(--cyan); overflow:auto">npm start</pre>
-        <p style="color:var(--muted); margin-top:1rem;">Then open <strong style="color:var(--text)">http://localhost:3000</strong> (not a raw <code>file://</code> path). See <a href="api.html" style="color:var(--gold)">Setup</a> for details.</p>`;
+        <p style="color:var(--muted); margin-bottom:1rem;">
+          ${isLocal 
+            ? "Price data requires the local engine. From the project folder run:" 
+            : "This host does not support the data engine (Node.js). To fix this, deploy to <strong>Vercel</strong> instead of GitHub Pages."}
+        </p>
+        ${isLocal ? `<pre style="background:rgba(0,0,0,0.35); border:1px solid var(--stroke-soft); border-radius:12px; padding:14px; font-family:var(--font-mono); font-size:0.82rem; color:var(--cyan); overflow:auto">npm start</pre>` : ''}
+        <p style="color:var(--muted); margin-top:1rem;">
+          ${isLocal 
+            ? `Then open <strong style="color:var(--text)">http://localhost:3000</strong>. See <a href="api.html" style="color:var(--gold)">Setup</a> for details.` 
+            : `Refer to <a href="https://github.com/${window.location.pathname.split('/')[1]}/${window.location.pathname.split('/')[2]}/blob/main/DEPLOY.md" style="color:var(--cyan)">DEPLOY.md</a> for Vercel instructions.`}
+        </p>`;
     } else {
       container.innerHTML = `<p style="color:var(--muted)">Could not load <strong>${stock}</strong>. Use a valid Yahoo Finance symbol (e.g. AAPL, MSFT, or exchange suffix like <code style="color:var(--cyan)">RELIANCE.NS</code> for India).</p>`;
     }
