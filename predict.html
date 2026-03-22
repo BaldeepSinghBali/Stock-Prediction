@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predict — FuzzyStock AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon glass glow-gold"><i class="fas fa-brain"></i></div>
+      Fuzzy<span class="gradient-text">Stock</span> AI
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="predict.html" class="active">Predict</a>
+      <a href="api.html">Docs</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-narrow">
+      <h1 class="gradient-text animate-in">Predictor workspace</h1>
+      <p class="animate-in" style="animation-delay: 0.1s; max-width: 600px">Use industry-standard Yahoo Finance symbols. Our engine calculates technical convergence across multiple indicators (RSI, MACD, Bollinger) to provide alignment-based signals in a deep-inference cycle.</p>
+
+      <div class="predict-layout">
+        <div class="panel glass">
+          <h2 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:8px">Symbol</h2>
+          <p class="hint">Examples: <code style="color:var(--cyan)">AAPL</code>, <code style="color:var(--cyan)">^NSEI</code> (Nifty), <code style="color:var(--cyan)">RELIANCE.NS</code>. Ensure your data stream is active.</p>
+          <div class="input-row">
+            <input type="text" id="stockInput" class="search-input" placeholder="e.g. AAPL" autocomplete="off" autofocus>
+            <button type="button" class="btn btn-primary" id="predictBtn"><i class="fas fa-bolt"></i> Analyze</button>
+          </div>
+          <p class="hint" style="margin-top:1rem">Quick picks</p>
+          <div class="chips">
+            <span class="chip" data-ticker="AAPL"><i class="fab fa-apple"></i> AAPL</span>
+            <span class="chip" data-ticker="MSFT"><i class="fab fa-microsoft"></i> MSFT</span>
+            <span class="chip" data-ticker="NVDA"><i class="fas fa-microchip"></i> NVDA</span>
+            <span class="chip" data-ticker="GOOGL"><i class="fab fa-google"></i> GOOGL</span>
+            <span class="chip" data-ticker="META"><i class="fab fa-facebook"></i> META</span>
+            <span class="chip" data-ticker="AMZN"><i class="fab fa-amazon"></i> AMZN</span>
+            <span class="chip" data-ticker="NFLX"><i class="fas fa-play"></i> NFLX</span>
+            <span class="chip" data-ticker="TSLA"><i class="fas fa-car"></i> TSLA</span>
+            <span class="chip" data-ticker="ADBE"><i class="fas fa-file-pdf"></i> ADBE</span>
+            <span class="chip" data-ticker="PYPL"><i class="fab fa-paypal"></i> PYPL</span>
+          </div>
+        </div>
+
+        <div class="panel results-wrap glass">
+          <h2 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:8px">Results</h2>
+          <p class="hint">Chart and metrics load after data returns.</p>
+          <div id="predictionResults">
+            <p style="color:var(--muted); font-size:0.95rem">Run an analysis to see the composite signal, indicator breakdown, and price chart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>FuzzyStock AI · Not financial advice</span>
+    <span><a href="index.html">Home</a> · <a href="api.html">Docs</a></span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/prediction.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FuzzyStock AI — Hybrid Intelligence for Markets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>#stockTicker { transition: opacity 0.28s ease, transform 0.28s ease; display: inline-block; }</style>
+</head>
+<body class="page-home">
+  <div class="home-photo-bg" aria-hidden="true"></div>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon glass glow-gold"><i class="fas fa-brain"></i></div>
+      Fuzzy<span class="gradient-text">Stock</span> AI
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="active">Home</a>
+      <a href="predict.html">Predict</a>
+      <a href="api.html">Docs</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="hero hero--wide">
+      <div class="hero-content reveal">
+      <div class="badge animate-in">Quantum Alpha Synthesis</div>
+      <h1 class="animate-in" style="animation-delay: 0.1s">Predict markets with <span class="gradient-text">Hybrid Intelligence.</span></h1>
+      <p class="animate-in" style="animation-delay: 0.2s">FuzzyStock AI merges high-fidelity price streams with an ensemble weighting engine to detect market convergence. Experience professional-grade signals with zero-latency inference.</p>
+        <div class="stat-row stat-row--spread">
+          <div class="stat">
+            <b>5+</b>
+            <span>Technical factors fused</span>
+          </div>
+          <div class="stat">
+            <b>Live</b>
+            <span>Global Market Ensemble</span>
+          </div>
+        </div>
+        <div class="cta-row cta-row--spread">
+          <a class="btn btn-primary" href="predict.html"><i class="fas fa-chart-line"></i> Open predictor</a>
+          <a class="btn btn-ghost" href="api.html">Documentation</a>
+        </div>
+      </div>
+      <div class="hero-ui reveal" style="animation-delay: 0.4s">
+      <div class="glass card" style="padding: 24px; min-width: 320px">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px">
+          <div class="quant-label">SYNERGY MONITOR</div>
+          <div class="status-dot"></div>
+        </div>
+        <canvas id="miniChart" height="60" style="width:100%; margin-bottom:16px"></canvas>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px">
+          <div class="stat-group">
+            <span class="quant-label">SENTIMENT</span>
+            <div class="stat-value" style="color:var(--cyan)">BULLISH</div>
+          </div>
+          <div class="stat-group">
+            <span class="quant-label">VOLATILITY</span>
+            <div class="stat-value">LOW</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <section class="page-narrow reveal" style="margin-top:72px">
+      <h2 class="section-title" data-reveal>Why this feels different</h2>
+      <p class="section-sub" data-reveal>Transparent rules, no black box: each factor votes; confidence rises when indicators agree — capped responsibly with clear disclaimers.</p>
+      <div class="feature-grid">
+        <article class="card reveal" data-reveal>
+          <i class="fas fa-layer-group"></i>
+          <h3>Hybrid fuzzy weighting</h3>
+          <p>RSI, MACD histogram, Bollinger position, SMA trend, and ROC combine into a composite score before a BUY/SELL label.</p>
+        </article>
+        <article class="card reveal" data-reveal>
+          <i class="fas fa-shield-halved"></i>
+          <h3>Alignment confidence</h3>
+          <p>Displayed confidence reflects how many factors point the same way — often <strong style="color:var(--gold)">89% and above</strong> when the ensemble strongly agrees (not a promise of future returns).</p>
+        </article>
+        <article class="card reveal" data-reveal>
+          <i class="fas fa-plug"></i>
+          <h3>Real-time pipeline</h3>
+          <p>The system connects directly to global price streams, processing data on your machine for maximum privacy and low-latency execution.</p>
+        </article>
+      </div>
+    </section>
+
+  <section class="section container reveal">
+    <div style="max-width: 800px; margin-bottom: 60px">
+      <h2 style="font-size: 2.5rem; margin-bottom: 20px">The <span class="gradient-text">Alpha-Convergence</span> Engine</h2>
+      <p style="color:var(--muted); font-size: 1.1rem; line-height: 1.8">Our proprietary logic doesn't just look at prices. It synthesizes five distinct technical dimensions including momentum divergence, volume volatility, and trend strength into a single fuzzy-weighted signal. This eliminates single-indicator noise and reveals the underlying market truth.</p>
+    </div>
+    
+    <div class="feature-grid">
+      <div class="glass card" style="padding:32px">
+        <i class="fas fa-microchip" style="font-size:1.5rem; color:var(--cyan); margin-bottom:20px"></i>
+        <h3>Real-time pipeline</h3>
+        <p>Direct integration with professional streams ensures that your dashboard stays in sync with global markets every millisecond.</p>
+      </div>
+      <div class="glass card" style="padding:32px">
+        <i class="fas fa-brain" style="font-size:1.5rem; color:var(--purple); margin-bottom:20px"></i>
+        <h3>Fuzzy Ensemble Logic</h3>
+        <p>Beyond simple averages, our fuzzy logic assigns dynamic weights to indicators, adapting to market conditions for more robust signals.</p>
+      </div>
+      <div class="glass card" style="padding:32px">
+        <i class="fas fa-chart-line" style="font-size:1.5rem; color:var(--gold); margin-bottom:20px"></i>
+        <h3>Alignment Confidence</h3>
+        <p>A unique confidence score based on indicator agreement, providing clarity on signal strength and reducing false positives.</p>
+      </div>
+      <div class="glass card" style="padding:32px">
+        <i class="fas fa-lock" style="font-size:1.5rem; color:var(--red); margin-bottom:20px"></i>
+        <h3>Client-side Processing</h3>
+        <p>Your data stays private. All analysis happens directly on your device, ensuring maximum security and zero-latency inference.</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="page-narrow reveal" style="margin-top:48px; padding-bottom:24px">
+      <div class="panel glass" style="max-width:720px; margin:0 auto">
+        <h2 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:8px">Try a symbol</h2>
+        <p class="hint">Opens the same engine as the full predictor page.</p>
+        <div class="input-row">
+          <input type="text" id="stockInput" class="search-input" placeholder="Ticker e.g. AAPL" autocomplete="off">
+          <button type="button" class="btn btn-primary" id="predictBtn">Run</button>
+        </div>
+        <div class="chips" style="margin-top:12px">
+          <span class="chip" data-ticker="AAPL">AAPL</span>
+          <span class="chip" data-ticker="MSFT">MSFT</span>
+          <span class="chip" data-ticker="GOOGL">GOOGL</span>
+          <span class="chip" data-ticker="TSLA">TSLA</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© FuzzyStock AI · Educational demo</span>
+    <span><a href="predict.html">Predict</a> · <a href="api.html">Docs</a></span>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" style="max-width:960px; width:92%; max-height:90vh; overflow:auto">
+      <div class="modal-header">
+        <div class="modal-title"><i class="fas fa-chart-area"></i> Quick prediction</div>
+        <button type="button" class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      </div>
+      <div id="modalBody" style="padding:1.25rem"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/prediction.js"></script>
+</body>
+</html>

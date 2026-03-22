@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — FuzzyStock AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon glass glow-gold"><i class="fas fa-brain"></i></div>
+      Fuzzy<span class="gradient-text">Stock</span> AI
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="predict.html">Predict</a>
+      <a href="api.html" class="active">Docs</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-narrow">
+      <h1 class="section-title">Ensemble Documentation</h1>
+      <p class="section-sub">FuzzyStock AI utilizes a hybrid weighting system powered by **Yahoo Finance** price streams. The engine calculates technical convergence across multiple indicators to provide alignment-based signals.</p>
+
+      <div class="panel glass" style="margin-top:28px" id="run">
+        <h2 style="font-family:var(--font-display); font-size:1.35rem; margin-bottom:12px"><i class="fas fa-microchip" style="color:var(--gold); margin-right:8px"></i> The Intelligence Engine</h2>
+        <p style="color:var(--muted); font-size:0.95rem; line-height:1.6;">The ensemble model processes five primary technical factors. When indicator synergy is detected, the confidence score increases, reflecting a high-conviction environment. The system is designed for high-privacy, processing all data on-device through the unified pipeline.</p>
+      </div>
+
+      <div class="panel glass" style="margin-top:24px">
+        <h2 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:12px"><i class="fas fa-chart-line" style="color:var(--gold); margin-right:8px"></i> Symbols</h2>
+        <p style="color:var(--muted); font-size:0.95rem">Use Yahoo’s ticker format: US stocks (<code style="color:var(--cyan)">AAPL</code>), indices (<code style="color:var(--cyan)">^GSPC</code>, <code style="color:var(--cyan)">^NSEI</code>), or exchange suffixes (e.g. <code style="color:var(--cyan)">RELIANCE.NS</code> for NSE).</p>
+        <p class="disclaimer" style="margin-top:12px">Yahoo data is unofficial and may change; this is suitable for research and educational purposes.</p>
+      </div>
+
+      <div class="panel glass" style="margin-top:24px">
+        <h2 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:12px"><i class="fas fa-sliders" style="color:var(--gold); margin-right:8px"></i> Risk Management</h2>
+        <p style="color:var(--muted); font-size:0.95rem">Confidence scores are relative to signal alignment. Users are encouraged to cross-reference multiple timeframes for maximum clarity.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>FuzzyStock AI</span>
+    <span><a href="predict.html">Predict</a> · <a href="index.html">Home</a></span>
+  </footer>
+
+  <script src="js/common.js"></script>
+</body>
+</html>
